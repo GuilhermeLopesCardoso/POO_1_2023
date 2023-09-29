@@ -29,11 +29,8 @@ public static void main(String[] args) {
 				todos += c.exibirdados();
 			}
 			JOptionPane.showInputDialog(todos);
-		})
-	}
-	
-	
-        
+		}
+	} while (op == 6);
 	
 	}
 

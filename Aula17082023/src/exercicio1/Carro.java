@@ -11,6 +11,6 @@ public class Carro {
 		ano = Integer.parseInt(JOptionPane.showInputDialog("Informe o ano de fabricação do carro"));
 	}
 	String exibirdados() {
-		return marca + " - " + ano + " - " + cor+\n;
+		return marca + " - " + ano + " - " + cor+"\n";
 	}
 }
