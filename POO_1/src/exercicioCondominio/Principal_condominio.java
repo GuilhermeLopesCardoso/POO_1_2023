@@ -50,7 +50,6 @@ public class Principal_condominio {
 	
 	
 	public static void Listagem1() {
-		
 		Double totaldesp = 0.0;
 		int selecmes;
 		int selecano;
@@ -69,7 +68,26 @@ public class Principal_condominio {
 		}
 	}
 	public static void Listagem2() {
-		
+		Double totaldesp = 0.0;
+		Double soma = 0.0;
+		int selecmes;
+		int selecano;
+		int selecap;
+		selecano = Integer.parseInt(JOptionPane.showInputDialog(null,"Informe o ano"));
+		selecmes = Integer.parseInt(JOptionPane.showInputDialog(null,"Informe o mes"));
+		selecap = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o Apartamento;"));
+		for(Despesa d: despesas) {
+			if (d.getMes()== selecmes && d.getAno()== selecano){
+				Double valorporap = d.getVal()/numeroAp();
+				totaldesp+=valorporap;
+			}
+		}
+		for (Apartamento a: apartamentos) {
+			if (a.getNum()== selecap) {
+				soma = a.getVal_fix()+totaldesp;
+			}
+		}
+		JOptionPane.showMessageDialog(null,"Esse Apartamento tem R$ "+soma+" de despesa total");
 	}
 
 }
