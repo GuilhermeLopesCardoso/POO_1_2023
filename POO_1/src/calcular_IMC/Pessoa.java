@@ -1,4 +1,4 @@
-package exercicios.calcular_IMC;
+package calcular_IMC;
 
 import javax.swing.JOptionPane;
 

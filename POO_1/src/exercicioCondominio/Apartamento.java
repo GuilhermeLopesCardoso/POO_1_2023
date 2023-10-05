@@ -7,12 +7,12 @@ public class Apartamento {
     private String propri;
     private Double val_fix;
 
-    public Apartamento() {
-        cadastra();
+    public Apartamento(int numeroAp) {
+        cadastra(numeroAp);
     }
 
-        void cadastra() {
-        setNum(Integer.parseInt(JOptionPane.showInputDialog("Informe o Número do Apartamento: ")));
+        void cadastra(int numeroAp) {
+        num = numeroAp;
         setBloco(JOptionPane.showInputDialog("Informe o Bloco do Apartamento: ").toUpperCase().charAt(0));
         setTam(Double.parseDouble(JOptionPane.showInputDialog("Informe o Tamanho do Apartamento: ")));
         setPropri(JOptionPane.showInputDialog("Informe o Nome do Proprietário: "));

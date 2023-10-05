@@ -1,4 +1,4 @@
-package exercicios.exercicio_matricula;
+package exercicio_matricula;
 
 import javax.swing.JOptionPane;
 

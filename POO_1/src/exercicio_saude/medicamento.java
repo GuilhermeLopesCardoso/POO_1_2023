@@ -1,4 +1,4 @@
-package exercicios.exercicio_saude;
+package exercicio_saude;
 
 public class medicamento {
 

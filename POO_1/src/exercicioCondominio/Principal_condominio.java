@@ -17,7 +17,15 @@ public class Principal_condominio {
 			op = menu();
 			switch (op) {
 			case 1:
-				apartamentos.add(new Apartamento());
+			        int numeroAp = Integer.parseInt(JOptionPane.showInputDialog("Informe o número do novo apartamento:"));
+				if (!verificaNumeroAp(numeroAp)) {
+
+                                        apartamentos.add(new Apartamento(numeroAp));
+
+                                        JOptionPane.showMessageDialog(null, "Apartamento cadastrado com sucesso!");
+                                } else {
+                                        JOptionPane.showMessageDialog(null, "O apartamento já existe!");
+                                }
 				break;
 			case 2:
 				despesas.add(new Despesa());
@@ -89,5 +97,16 @@ public class Principal_condominio {
 		}
 		JOptionPane.showMessageDialog(null,"Esse Apartamento tem R$ "+soma+" de despesa total");
 	}
+	
+	public static boolean verificaNumeroAp(int numeroAp) {
 
+                for (Apartamento a : apartamentos) {
+
+                        if (a.getNum() == numeroAp) {
+                                return true;
+                        }
+                }
+
+                return false;
+        }
 }

@@ -1,4 +1,4 @@
-package exercicios.exercicio_carro;
+package exercicio_carro;
 
 import javax.swing.JOptionPane;
 

@@ -1,4 +1,4 @@
-package atividade_1509;
+package atividade1509;
 
 import java.util.ArrayList;
 
