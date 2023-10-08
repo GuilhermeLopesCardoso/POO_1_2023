@@ -12,47 +12,53 @@ public class Conta {
 
     //Cadastrar
     //---------------------------------------------------------------------------------------------------------------------------------------------------------
-    public void cadastra(ArrayList <Conta> contas) {
-        num = JOptionPane.showInputDialog("Informe o número da conta: ");
-        agen = JOptionPane.showInputDialog("Informe a Agência: ");
-        corren = JOptionPane.showInputDialog("Informe o nome do Correntista: ");
-        setSald(0.00);
+    public void cadastra(ArrayList <Conta> contas){
+		int nume = (Integer.parseInt(JOptionPane.showInputDialog(null,"Qual o número da conta:")));
+		int agenc =(Integer.parseInt(JOptionPane.showInputDialog(null,"Qual o número da agencia:")));
+		setCorren(JOptionPane.showInputDialog(null,"Qual o nome do correntista:"));
+		if (!validar(contas, nume, agenc)) {
+			JOptionPane.showMessageDialog(null,"Lamento Cadastre novamente");
+			cadastra(contas);
+		}
+		setNum(nume);
+		setAgen(agenc);
+		setSald(0.00);
+
     }
-
-
     //Depósito
     //---------------------------------------------------------------------------------------------------------------------------------------------------------
     public void Deposito(Double val) {
-        setSald(sald+=val);
-        JOptionPane.showMessageDialog("Depósito Concluído");
+		setSald(sald+=val );
+		JOptionPane.showMessageDialog(null,"Deposito concluido");
     }
-
     //Saque
     //---------------------------------------------------------------------------------------------------------------------------------------------------------
     public void Saque (Double val) {
-        if (sald < val) {
-            JOptionPane.showMessageDialog("Lamento, saldo Insuficiente!");
-        } else {
-            setSald(sald -= val);
-        }
-    }
+		if (sald < val) {
+			JOptionPane.showMessageDialog(null,"Saldo Insuficiente");
+		}
+		else {
+			setSald(sald -=val);
+		}
+	}
 
     //Verifica
     //---------------------------------------------------------------------------------------------------------------------------------------------------------
-    private boolean validar(ArrayList <Conta> contas) {
-        for (Conta c:contas) {
-            if(num==c.num && agen==c.agen) {
-                JOptionPane.showMessageDialog("Conta inválida");
-                return false;
-            }
-        } return true;
-    }
+    private boolean validar(ArrayList <Conta> contas,int nume,int agenc) {
+		for (Conta c:contas) {
+			if (nume == c.num && agenc == c.agen) {
+				JOptionPane.showMessageDialog(null,"Conta invalida");
+				return false;
+			}
+		}
+		return true;
+	}
 
     //Extrato
     //---------------------------------------------------------------------------------------------------------------------------------------------------------
-    public void exibirExtrato() {
-        JOptionPane.showMessageDialog("Conta "+num+" Agência "+agen+"/n"+"Saldo "+sald);
-    }
+    public void Exibir() {
+		JOptionPane.showMessageDialog(null, "conta "+num+" agencia "+agen+"\n"+"saldo: "+sald);
+	}
 
     //Getter e Setters
     //---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -95,4 +101,4 @@ public class Conta {
         this.sald = sald;
     }
 
-}
+    }
