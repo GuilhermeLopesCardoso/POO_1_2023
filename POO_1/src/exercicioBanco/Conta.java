@@ -39,7 +39,7 @@ public class Conta {
 
     //Verifica
     //---------------------------------------------------------------------------------------------------------------------------------------------------------
-    private boolean validar(ArrayList <Conta> contas, int num, int agen) {
+    private boolean validar(ArrayList <Conta> contas) {
         for (Conta c:contas) {
             if(num==c.num && agen==c.agen) {
                 JOptionPane.showMessageDialog("Conta inválida");
@@ -47,4 +47,52 @@ public class Conta {
             }
         } return true;
     }
+
+    //Extrato
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------
+    public void exibirExtrato() {
+        JOptionPane.showMessageDialog("Conta "+num+" Agência "+agen+"/n"+"Saldo "+sald);
+    }
+
+    //Getter e Setters
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------
+    public int getNum() {
+        return num;
+    }
+
+
+    public int getAgen() {
+        return agen;
+    }
+
+
+    public String getCorren() {
+        return corren;
+    }
+
+
+    public Double getSald() {
+        return sald;
+    }
+
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+
+    public void setAgen(int agen) {
+        this.agen = agen;
+    }
+
+
+    public void setCorren(String corren) {
+        this.corren = corren;
+    }
+
+
+    public void setSald(Double sald) {
+        this.sald = sald;
+    }
+
 }
