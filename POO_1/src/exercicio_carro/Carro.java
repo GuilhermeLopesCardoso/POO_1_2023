@@ -1,39 +1,23 @@
 package exercicio_carro;
-
-import javax.swing.JOptionPane;
-
+import javax.swing.*;
 public class Carro {
-	
-	String marca;
-	String cor;
-	int ano;
-	
-	// Boolean: Verdadeira ou falso.
-	boolean cadastrar() {
-		marca = JOptionPane.showInputDialog("Marca:");
-		cor = JOptionPane.showInputDialog("Cor:");
-		ano = Integer.parseInt(JOptionPane.showInputDialog("Ano:"));
-		return validaCadastro();
-	}
-	
-	boolean validaCadastro() {
-		if(marca.equals("")) {
-			JOptionPane.showMessageDialog(null, "Marca é obrigatório");
-			return false;
-		}
-		if(cor.equals("")) {
-			JOptionPane.showMessageDialog(null, "Cor é obrigatório");
-			return false;
-		}
-		if(ano < 1954 || ano > 2023) {
-			JOptionPane.showMessageDialog(null, "Ano inválido");
-			return false;
-		}
-		return true;
-	}
-	
-	String exibir() {
-		return marca + " - " + cor + " - " + ano + "\n";
-	}
+    protected String marca;
+    protected String cor;
+    protected int anofab;
+
+
+    //Cadastrar carro
+    //-----------------------------------------------------------------------------------------------------------------------------------------
+    public void Cadastra() {
+        marca = JOptionPane.showInputDialog("Informe a marca do veículo: ");
+        cor = JOptionPane.showInputDialog("Informe a cor do veículo: ");
+        anofab = Integer.parseInt(JOptionPane.showInputDialog("Informe o ano de fabricação do veículo: "));
+    }
+
+    //Validar se já existe um carro com os mesmos dados
+    //-----------------------------------------------------------------------------------------------------------------------------------------
+    public void validaDados() {
+        
+    }
 
 }
