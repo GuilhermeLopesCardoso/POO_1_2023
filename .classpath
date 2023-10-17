@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="aulaprescricao/|exerciciotime/" kind="src" path="POO_1/src"/>
+	<classpathentry kind="src" path="POO_1/src/aulaprescricao"/>
+	<classpathentry kind="src" path="POO_1/src/exerciciotime"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
