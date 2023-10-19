@@ -28,7 +28,7 @@ public class Conta {
     //Depósito
     //---------------------------------------------------------------------------------------------------------------------------------------------------------
     public void Deposito(Double val) {
-		setSald(sald+=val );
+		setSald(sald+=val);
 		JOptionPane.showMessageDialog(null,"Deposito concluido");
     }
     //Saque
