@@ -1,6 +1,6 @@
 package atividadeSimulado;
 public class Alpha {
-    protected int over;
+    int over;
     public Alpha() {
         System.out.println(over);
     }
