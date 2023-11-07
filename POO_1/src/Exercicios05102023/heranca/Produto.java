@@ -1,4 +1,4 @@
-package Exercicios05102023.heranca;
+package exercicios05102023.heranca;
 
 public class Produto {
     protected String nome;
