@@ -16,7 +16,7 @@ public class Carro {
 
     //Validar se já existe um carro com os mesmos dados
     //-----------------------------------------------------------------------------------------------------------------------------------------
-    public void validaDados() {
+    protected void validaDados() {
         
     }
 
