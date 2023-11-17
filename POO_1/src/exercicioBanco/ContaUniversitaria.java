@@ -1,16 +1,23 @@
 package exercicioBanco;
-import javax.swing.*;
+
 public class ContaUniversitaria extends Conta{
-    
-    //Depósito
-    //---------------------------------------------------------------------------------------------------------------------------------------------------------
-    public void Deposito(Double val) {
-		if (sald + val == 2000) {
-			JOptionPane.showMessageDialog(null,"Lamento Saldo maximo atingido");
-		}else {
-		setSald(sald+=val );
-		JOptionPane.showMessageDialog(null,"Deposito concluido");
-		}
-	}
 	
+	
+	
+	public ContaUniversitaria() {
+		super();
+	}
+
+	public ContaUniversitaria(int numero, int agencia, String cliente, double saldo) {
+		super(numero, agencia, cliente, saldo);
+	}
+
+	@Override
+	public boolean deposito(double vl) {
+		if(saldo + vl < 2000) {
+			return super.deposito(vl);
+		}
+		return false;
+	}
+
 }
