@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-public class PrincipalFarmacia {
+/*public class PrincipalFarmacia {
     public static ArrayList<Produto> produtos = new ArrayList<Produto>();
     public static void main(String[] args) {
         int op = 0;
@@ -28,3 +28,4 @@ public class PrincipalFarmacia {
     }
 
 }
+*/
